@@ -60,7 +60,7 @@ setup(
         'Programming Language :: Python :: 2.7',
     ],
 
-    keywords='aws azure secrets credentials knife',
+    keywords='aws azure secrets salesforce cloud servicescredentials knife',
 
     packages=['messer'],
 
