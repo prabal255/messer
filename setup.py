@@ -27,11 +27,11 @@ APP_NAME = "messer"
 # this is a bit of a hack to print out a properties file for jenkins to pickup which,
 # will allow us to know the name of the artifact that we need to upload to S3.
 if __name__ == "__main__":
-    f = open('jenkins.properties', 'w')
-    f.write("ARTIFACT_FILE={0}-{1}.tar.gz\n".format(APP_NAME, APP_VERSION))
-    f.write("ARTIFACT_VERSION={0}\n".format(APP_VERSION))
-    f.write("ARTIFACT_NAME={0}\n".format(APP_NAME))
-    f.close()
+    file1 = open('jenkins.properties', 'w')
+    file1.write("ARTIFACT_FILE={0}-{1}.tar.gz\n".format(APP_NAME, APP_VERSION))
+    file1.write("ARTIFACT_VERSION={0}\n".format(APP_VERSION))
+    file1.write("ARTIFACT_NAME={0}\n".format(APP_NAME))
+    file1.close()
 
 setup(
     name=APP_NAME,
@@ -57,10 +57,10 @@ setup(
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2.7.3',
     ],
 
-    keywords='aws azure secrets salesforce cloud servicescredentials knife',
+    keywords='aws azure secrets salesforce cloud services credentials knife',
 
     packages=['messer'],
 
